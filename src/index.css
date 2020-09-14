@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing:border-box;
+}
+
+.calculator {
+  max-width:500px;
+  margin: 0 auto;
+  border:2px solid black;
+  border-radius:10px;
+
+}
+
+.calculator input {
+  background: none;
+  border: none;
+  box-shadow: none;
+  width:100%;
+  border-bottom:2px solid black;
+  padding:20px;
+  text-align:right;
+  font-size:40px;
+}
+
+.button-container {
+
+}
+
+.calc-button {
+
+}
+
+.big {
+
+}
+
+.equal {
+
+}
+
+.clear {
+
+}
