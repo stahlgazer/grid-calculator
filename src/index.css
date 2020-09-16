@@ -5,6 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 code {
@@ -19,8 +30,9 @@ code {
 .calculator {
   max-width: 500px;
   margin: 5% auto;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(54, 54, 54);
 }
 
 .calculator input {
