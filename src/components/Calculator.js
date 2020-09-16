@@ -28,7 +28,7 @@ export default function Calculator() {
 
   return (
     <div className="calculator">
-      <input type="number" onChange={numClick} value={result} placeholder="0" />
+      <input disabled type="number" onChange={numClick} value={result} placeholder="0" />
       <div className="buttons-container">
         <button onClick={clearClick} className="calc-button clear">
           Clear
