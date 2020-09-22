@@ -28,7 +28,7 @@ code {
 }
 
 .calculator {
-  max-width: 500px;
+  max-width: 450px;
   margin: 5% auto;
   border: 3px solid rgb(153, 153, 153);
   background: rgb(68, 68, 68);
@@ -84,4 +84,10 @@ code {
 }
 .clear:hover, .equal:hover{
   background:#e66f6f;
+}
+
+span {
+  color:white;
+  font-size: 30px;
+  margin-left:5px;
 }

@@ -25,10 +25,12 @@ export default function Calculator() {
 
   const clearClick = () => {
     setResult(0);
+    setMemory("");
   };
 
   return (
     <div className="calculator">
+      <span>Memory</span>
       <input disabled type="text" value={memory}></input>
       <input disabled type="number" value={result} placeholder="0" />
       <div className="buttons-container">
