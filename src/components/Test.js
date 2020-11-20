@@ -1,56 +1,45 @@
 import React, { useState } from "react";
 
-export default function Calculator() {
-  const [entry, setEntry] = useState(0);
+export default function Test() {
+  const [result, setResult] = useState(0);
   const [memory, setMemory] = useState("");
 
-  const calculate = (e) => {
-    setMemory(eval(memory + entry));
-  };
-
   const numClick = (e) => {
-    if (entry === 0) {
-      setEntry(e.target.value);
-    } else if (e.target.value === "/") {
-      setMemory(entry + e.target.value);
-      setEntry(0);
-    } else if (e.target.value === "*") {
-      setMemory(entry + e.target.value);
-      setEntry(0);
-    } else if (e.target.value === "+") {
-      setMemory(entry + e.target.value);
-      setEntry(0);
-    } else if (e.target.value === "-") {
-      setMemory(entry + e.target.value);
-      setEntry(0);
+    if (result === 0) {
+      setResult(e.target.value);
+    } else if (
+      e.target.value === "/" ||
+      e.target.value === "*" ||
+      e.target.value === "+" ||
+      e.target.value === "-"
+    ) {
+      setMemory(result + e.target.value);
+      setResult(0);
     } else if (e.target.value === "=") {
-      setMemory(memory + entry);
-      setMemory(calculate);
-      setEntry(0);
+      setMemory(memory + result);
+      setResult(eval(memory + result));
     } else {
-      setEntry(entry + e.target.value);
+      setResult(`${result}${e.target.value}`);
     }
   };
 
   const clearClick = () => {
-    setEntry(0);
+    setResult(0);
     setMemory("");
   };
-  console.log("current entry: ", entry);
-  console.log("current memory: ", memory);
 
   return (
     <div className="calculator">
-      <span>Answer</span>
+      <span>Memory</span>
       <input disabled type="text" value={memory}></input>
-      <input disabled type="number" value={entry} placeholder="0" />
+      <input disabled type="number" value={result} placeholder="0" />
       <div className="buttons-container">
         <button onClick={clearClick} className="calc-button clear">
           Clear
         </button>
         <button
           value="/"
-          disabled={entry === 0}
+          disabled={result === 0}
           onClick={numClick}
           className="calc-button"
         >
@@ -67,7 +56,7 @@ export default function Calculator() {
         </button>
         <button
           value="*"
-          disabled={entry === 0}
+          disabled={result === 0}
           onClick={numClick}
           className="calc-button"
         >
@@ -84,7 +73,7 @@ export default function Calculator() {
         </button>
         <button
           value="-"
-          disabled={entry === 0}
+          disabled={result === 0}
           onClick={numClick}
           className="calc-button"
         >
@@ -101,7 +90,7 @@ export default function Calculator() {
         </button>
         <button
           value="+"
-          disabled={entry === 0}
+          disabled={result === 0}
           onClick={numClick}
           className="calc-button"
         >
@@ -112,7 +101,7 @@ export default function Calculator() {
         </button>
         <button
           value="="
-          disabled={entry === 0}
+          disabled={result === 0}
           onClick={numClick}
           className="calc-button equal"
         >
@@ -122,6 +111,3 @@ export default function Calculator() {
     </div>
   );
 }
-
-
-
