@@ -1,1 +1,1 @@
-Welcome to a simple calculator that I created while learning how to use CSS grid. The logic is functional, although it's not meant for scientific or complex purposes. It could be better but I made this from scratch without following any tutorials, so I'm pleased with the results.
+Welcome to a simple calculator that I created while learning how to use CSS grid. The logic is functional, although it's not meant for scientific or complex purposes. It could be better but I made this from scratch without following any tutorials.
